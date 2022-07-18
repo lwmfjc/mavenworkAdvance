@@ -10,6 +10,7 @@
     <version>1.0.0</version>
     <modules>
         <module>../002-maven-java</module>
+        <module>../003-maven-web</module>
     </modules>
     <!--
      packaging 标签指定打包方式，默认为jar
