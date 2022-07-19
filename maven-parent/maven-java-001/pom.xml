@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--指向父工程-->
+    <parent>
+        <artifactId>maven-parent</artifactId>
+        <groupId>com.bjpowernode.maven</groupId>
+        <version>1.0.0</version>
+        <!--注意，这里不需要找pom.xml，因为该子工程和父工程的pom.xml同级-->
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>maven-java-001</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>maven-java-0101</module>
+    </modules>
+
+</project>
