@@ -8,6 +8,15 @@
     <artifactId>001-maven-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+
+    <properties>
+        <!--自定义标签名称-->
+        <!--约定：通常管理依赖版本号的标签名：项目名称+字段version-->
+        <junit-version>4.12</junit-version>
+        <mysql-connector-java-version>5.1.46</mysql-connector-java-version>
+        <dubbo-version>2.5.3</dubbo-version>
+    </properties>
+
     <modules>
         <module>../002-maven-java</module>
         <module>../003-maven-web</module>
@@ -20,6 +29,26 @@
         1、packaging标签的文本内容必须设置为pom
         2、把src删除
     -->
+    <!--加强管理-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
 </project>
